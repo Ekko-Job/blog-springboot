@@ -31,6 +31,8 @@
         <module>blog-module-admin</module>
         <!-- 通用模块 -->
         <module>blog-module-common</module>
+        <!-- NEEX模块 -->
+        <module>blog-NEEX</module>
     </modules>
 
     <!-- 版本号统一管理 -->
