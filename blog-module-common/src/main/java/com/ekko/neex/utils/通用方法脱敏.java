@@ -1,4 +1,4 @@
-package com.ekko.utils;
+package com.ekko.neex.utils;
 
 /**
  * 通用方法脱敏

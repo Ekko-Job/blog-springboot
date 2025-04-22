@@ -1,4 +1,4 @@
-package com.ekko.login;
+package com.ekko.neex.login;
 
 import cn.hutool.core.codec.Base64;
 import cn.hutool.json.JSONObject;

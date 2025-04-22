@@ -1,4 +1,4 @@
-package com.ekko.mq;// package com.mq;
+package com.ekko.neex.mq;// package com.mq;
 //
 // import com.rabbitmq.client.Channel;
 // import org.slf4j.Logger;

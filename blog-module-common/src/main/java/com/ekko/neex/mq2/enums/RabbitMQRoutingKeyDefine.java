@@ -1,4 +1,4 @@
-package com.ekko.mq2.enums;
+package com.ekko.neex.mq2.enums;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

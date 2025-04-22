@@ -1,4 +1,4 @@
-package com.ekko.mq;// package com.mq;
+package com.ekko.neex.mq;// package com.mq;
 //
 // import org.springframework.amqp.core.Binding;
 // import org.springframework.amqp.core.BindingBuilder;

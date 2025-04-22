@@ -1,4 +1,4 @@
-package com.ekko.mq2.utils;
+package com.ekko.neex.mq2.utils;
 
 import lombok.AllArgsConstructor;
 
