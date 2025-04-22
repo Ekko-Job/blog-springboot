@@ -1,0 +1,7 @@
+2025-04-25 13:46:49.719 [main] INFO  com.ekko.blogWebApplicationTests - Starting blogWebApplicationTests using Java 1.8.0_291 on Ekko with PID 29024 (started by www16 in D:\Code\Ekko-blog\blog-springboot\blog-web)
+2025-04-25 13:46:49.720 [main] INFO  com.ekko.blogWebApplicationTests - The following profiles are active: prod
+2025-04-25 13:46:50.706 [main] INFO  com.ekko.blogWebApplicationTests - Started blogWebApplicationTests in 1.304 seconds (JVM running for 1.907)
+2025-04-25 13:46:50.863 [main] INFO  com.ekko.blogWebApplicationTests - 这是一行 Info 级别日志
+2025-04-25 13:46:50.864 [main] WARN  com.ekko.blogWebApplicationTests - 这是一行 Warn 级别日志
+2025-04-25 13:46:50.864 [main] ERROR com.ekko.blogWebApplicationTests - 这是一行 Error 级别日志
+2025-04-25 13:46:50.873 [main] INFO  com.ekko.blogWebApplicationTests - 这是一行带有占位符日志，作者：Ekko
