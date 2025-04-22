@@ -32,7 +32,7 @@
         <!-- 通用模块 -->
         <module>blog-module-common</module>
         <!-- NEEX模块 -->
-        <module>blog-NEEX</module>
+<!--        <module>blog-NEEX</module>-->
     </modules>
 
     <!-- 版本号统一管理 -->
