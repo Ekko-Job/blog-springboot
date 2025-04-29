@@ -47,7 +47,7 @@ public class ApiOperationLogAspect {
             // 请求开始时间
             long startTime = System.currentTimeMillis();
 
-            // MDC
+            // traceId 表示跟踪 ID， 值这里直接用的 UUID
             MDC.put("traceId", UUID.randomUUID().toString());
 
             // 获取被请求的类和方法
@@ -78,7 +78,9 @@ public class ApiOperationLogAspect {
 
             return result;
         } finally {
+
             MDC.clear();
+
         }
     }
 
