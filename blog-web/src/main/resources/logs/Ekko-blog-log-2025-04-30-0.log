@@ -1,0 +1,40 @@
+2025-04-30 00:28:52.183 [TraceId: ] [main] INFO  com.ekko.blogWebApplication - Starting blogWebApplication using Java 1.8.0_291 on Ekko with PID 22944 (D:\Code\Ekko-blog\blog-springboot\blog-web\target\classes started by www16 in D:\Code\Ekko-blog\blog-springboot)
+2025-04-30 00:28:52.185 [TraceId: ] [main] INFO  com.ekko.blogWebApplication - The following profiles are active: prod
+2025-04-30 00:28:52.828 [TraceId: ] [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-04-30 00:28:52.833 [TraceId: ] [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-30 00:28:52.833 [TraceId: ] [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2025-04-30 00:28:52.883 [TraceId: ] [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-30 00:28:52.883 [TraceId: ] [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 670 ms
+2025-04-30 00:28:53.178 [TraceId: ] [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-04-30 00:28:53.185 [TraceId: ] [main] INFO  com.ekko.blogWebApplication - Started blogWebApplication in 1.416 seconds (JVM running for 1.867)
+2025-04-30 00:29:01.487 [TraceId: ] [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-30 00:29:01.487 [TraceId: ] [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-30 00:29:01.487 [TraceId: ] [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2025-04-30 00:29:01.590 [TraceId: 62a011a2-c7e2-4db4-9949-6d9e1ef6d96a] [http-nio-8080-exec-2] INFO  com.ekko.aspect.ApiOperationLogAspect - ====== 请求开始: [测试接口], 入参: {"username":"Ekko","sex":1,"age":32,"email":"123124@qq.com"}, 请求类: TestController, 请求方法: test
+2025-04-30 00:29:01.598 [TraceId: 62a011a2-c7e2-4db4-9949-6d9e1ef6d96a] [http-nio-8080-exec-2] INFO  com.ekko.aspect.ApiOperationLogAspect - ====== 请求结束: [测试接口], 出参: {"code":"MSCS0000","msg":"成功","data":{"username":"Ekko","sex":1,"age":32,"email":"123124@qq.com"},"traceId":null}, 耗时: 14ms
+2025-04-30 00:30:24.198 [TraceId: 37728f55-fb05-4e8d-bbee-527c00332e2d] [http-nio-8080-exec-5] INFO  com.ekko.aspect.ApiOperationLogAspect - ====== 请求开始: [测试接口], 入参: {"username":"Ekko","sex":null,"age":32,"email":"123124@qq.com"}, 请求类: TestController, 请求方法: test
+2025-04-30 00:30:24.199 [TraceId: 37728f55-fb05-4e8d-bbee-527c00332e2d] [http-nio-8080-exec-5] INFO  com.ekko.aspect.ApiOperationLogAspect - ====== 请求结束: [测试接口], 出参: {"code":"MSCE9999","msg":"失败","data":"性别不能为空","traceId":null}, 耗时: 1ms
+2025-04-30 00:30:25.158 [TraceId: e7ea27e3-c346-4f3b-9925-842ba37822cf] [http-nio-8080-exec-6] INFO  com.ekko.aspect.ApiOperationLogAspect - ====== 请求开始: [测试接口], 入参: {"username":"Ekko","sex":null,"age":32,"email":"123124@qq.com"}, 请求类: TestController, 请求方法: test
+2025-04-30 00:30:25.159 [TraceId: e7ea27e3-c346-4f3b-9925-842ba37822cf] [http-nio-8080-exec-6] INFO  com.ekko.aspect.ApiOperationLogAspect - ====== 请求结束: [测试接口], 出参: {"code":"MSCE9999","msg":"失败","data":"性别不能为空","traceId":null}, 耗时: 1ms
+2025-04-30 00:30:26.192 [TraceId: e58d6145-3159-4d15-8fb6-abaea10b88a3] [http-nio-8080-exec-7] INFO  com.ekko.aspect.ApiOperationLogAspect - ====== 请求开始: [测试接口], 入参: {"username":"Ekko","sex":null,"age":32,"email":"123124@qq.com"}, 请求类: TestController, 请求方法: test
+2025-04-30 00:30:26.193 [TraceId: e58d6145-3159-4d15-8fb6-abaea10b88a3] [http-nio-8080-exec-7] INFO  com.ekko.aspect.ApiOperationLogAspect - ====== 请求结束: [测试接口], 出参: {"code":"MSCE9999","msg":"失败","data":"性别不能为空","traceId":null}, 耗时: 0ms
+2025-04-30 00:30:57.314 [TraceId: 6a8177e6-cf70-44cb-a837-21a07c75687a] [http-nio-8080-exec-8] INFO  com.ekko.aspect.ApiOperationLogAspect - ====== 请求开始: [测试接口], 入参: {"username":"Ekko","sex":1,"age":32,"email":"123124@qq.com"}, 请求类: TestController, 请求方法: test
+2025-04-30 00:30:57.315 [TraceId: 6a8177e6-cf70-44cb-a837-21a07c75687a] [http-nio-8080-exec-8] INFO  com.ekko.aspect.ApiOperationLogAspect - ====== 请求结束: [测试接口], 出参: {"code":"MSCS0000","msg":"成功","data":{"username":"Ekko","sex":1,"age":32,"email":"123124@qq.com"},"traceId":null}, 耗时: 1ms
+2025-04-30 00:30:58.244 [TraceId: fe7e3b21-2df3-429d-a473-2cad2826bf90] [http-nio-8080-exec-9] INFO  com.ekko.aspect.ApiOperationLogAspect - ====== 请求开始: [测试接口], 入参: {"username":"Ekko","sex":1,"age":32,"email":"123124@qq.com"}, 请求类: TestController, 请求方法: test
+2025-04-30 00:30:58.245 [TraceId: fe7e3b21-2df3-429d-a473-2cad2826bf90] [http-nio-8080-exec-9] INFO  com.ekko.aspect.ApiOperationLogAspect - ====== 请求结束: [测试接口], 出参: {"code":"MSCS0000","msg":"成功","data":{"username":"Ekko","sex":1,"age":32,"email":"123124@qq.com"},"traceId":null}, 耗时: 0ms
+2025-04-30 00:35:08.293 [TraceId: ] [main] INFO  com.ekko.blogWebApplication - Starting blogWebApplication using Java 1.8.0_291 on Ekko with PID 31812 (D:\Code\Ekko-blog\blog-springboot\blog-web\target\classes started by www16 in D:\Code\Ekko-blog\blog-springboot)
+2025-04-30 00:35:08.295 [TraceId: ] [main] INFO  com.ekko.blogWebApplication - The following profiles are active: prod
+2025-04-30 00:35:08.970 [TraceId: ] [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-04-30 00:35:08.976 [TraceId: ] [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-30 00:35:08.977 [TraceId: ] [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2025-04-30 00:35:09.025 [TraceId: ] [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-30 00:35:09.026 [TraceId: ] [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 701 ms
+2025-04-30 00:35:09.306 [TraceId: ] [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-04-30 00:35:09.312 [TraceId: ] [main] INFO  com.ekko.blogWebApplication - Started blogWebApplication in 1.403 seconds (JVM running for 1.85)
+2025-04-30 00:35:09.876 [TraceId: ] [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-30 00:35:09.876 [TraceId: ] [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-30 00:35:09.877 [TraceId: ] [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-04-30 00:35:09.992 [TraceId: 5da2ceea-b82a-4551-8c03-ca46a3dc41a1] [http-nio-8080-exec-1] INFO  com.ekko.aspect.ApiOperationLogAspect - ====== 请求开始: [测试接口], 入参: {"username":"Ekko","sex":1,"age":32,"email":"123124@qq.com"}, 请求类: TestController, 请求方法: test
+2025-04-30 00:35:10.001 [TraceId: 5da2ceea-b82a-4551-8c03-ca46a3dc41a1] [http-nio-8080-exec-1] INFO  com.ekko.aspect.ApiOperationLogAspect - ====== 请求结束: [测试接口], 出参: {"code":"MSCS0000","msg":"成功","data":{"username":"Ekko","sex":1,"age":32,"email":"123124@qq.com"},"traceId":"5da2ceea-b82a-4551-8c03-ca46a3dc41a1"}, 耗时: 16ms
+2025-04-30 00:35:18.106 [TraceId: 419fa2bc-3356-4dc1-a9b8-b3a353a5bc3b] [http-nio-8080-exec-3] INFO  com.ekko.aspect.ApiOperationLogAspect - ====== 请求开始: [测试接口], 入参: {"username":"Ekko","sex":null,"age":32,"email":"123124@qq.com"}, 请求类: TestController, 请求方法: test
+2025-04-30 00:35:18.108 [TraceId: 419fa2bc-3356-4dc1-a9b8-b3a353a5bc3b] [http-nio-8080-exec-3] INFO  com.ekko.aspect.ApiOperationLogAspect - ====== 请求结束: [测试接口], 出参: {"code":"MSCE9999","msg":"失败","data":"性别不能为空","traceId":"419fa2bc-3356-4dc1-a9b8-b3a353a5bc3b"}, 耗时: 1ms
