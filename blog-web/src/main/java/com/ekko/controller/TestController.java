@@ -30,20 +30,20 @@ public class TestController {
 
     @PostMapping("/test")
     @ApiOperationLog(description = "测试接口")
-    public Resp test(@RequestBody @Validated User user, BindingResult bindingResult) {
+    public Resp test(@RequestBody @Validated User user) {
         // 是否存在校验错误
-        if (bindingResult.hasErrors()) {
-            // 获取校验不通过字段的提示信息
-            String errorMsg = bindingResult.getFieldErrors()
-                    .stream()
-                    .map(FieldError::getDefaultMessage)
-                    .collect(Collectors.joining(", "));
-
-            return Resp.createFailerResp(errorMsg);
-        }
+        // if (bindingResult.hasErrors()) {
+        //     // 获取校验不通过字段的提示信息
+        //     String errorMsg = bindingResult.getFieldErrors()
+        //             .stream()
+        //             .map(FieldError::getDefaultMessage)
+        //             .collect(Collectors.joining(", "));
+        //
+        //     return Resp.createFailerResp(errorMsg);
+        // }
         // ex(MSCE9999);
         // int i = 1/0;
-        return Resp.createFailerResp(null);
+        return Resp.createSuccessCodeResp(null);
     }
 
 }

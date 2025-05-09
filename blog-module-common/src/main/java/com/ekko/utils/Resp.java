@@ -4,7 +4,6 @@ import com.ekko.exception.BaseExceptionInterface;
 import com.ekko.exception.BusinessException;
 import lombok.Data;
 
-import javax.xml.ws.Response;
 import java.io.Serializable;
 
 /**
@@ -49,22 +48,28 @@ public class Resp<T> implements Serializable {
         return response;
     }
 
-    public static <T> Resp<T> fail(BusinessException businessException,  T data) {
+    public static <T> Resp<T> fail(BusinessException businessException, T traceId) {
         Resp<T> response = new Resp<>();
         response.setCode(businessException.getErrorCode());
         response.setMsg(businessException.getErrorMessage());
-        response.setTraceId((String) data);
+        response.setTraceId((String) traceId);
         return response;
     }
 
-    public static <T> Resp<T> fail(BaseExceptionInterface baseExceptionInterface,  T data) {
+    public static <T> Resp<T> fail(BaseExceptionInterface baseExceptionInterface, T traceId) {
         Resp<T> response = new Resp<>();
         response.setCode(baseExceptionInterface.getErrorCode());
         response.setMsg(baseExceptionInterface.getErrorMessage());
-        response.setTraceId((String) data);
+        response.setTraceId((String) traceId);
         return response;
     }
 
 
-
+    public static Resp<Object> fail(String errorCode, String errorMessage, String traceId) {
+        Resp<Object> response = new Resp<>();
+        response.setCode(errorCode);
+        response.setMsg(errorMessage);
+        response.setTraceId(traceId);
+        return response;
+    }
 }
