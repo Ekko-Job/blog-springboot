@@ -51,8 +51,8 @@ public class ApiOperationLogAspect {
             long startTime = System.currentTimeMillis();
 
             // traceId 表示跟踪 ID， 值这里直接用的 UUID
-            String traceId = UUID.randomUUID().toString();
-            MDC.put("traceId", traceId);
+            // String traceId = UUID.randomUUID().toString();
+            // MDC.put("traceId", traceId);
 
             // 获取被请求的类和方法
             String className = joinPoint.getTarget().getClass().getSimpleName();
@@ -78,12 +78,13 @@ public class ApiOperationLogAspect {
             // 打印请求相关参数
             log.info("====== 请求开始: [{}], 入参: {}, 请求类: {}, 请求方法: {}", description, argsJsonStr, className, methodName);
 
-            // 执行切点方法
+            // TODO 执行切点方法
             Object result = joinPoint.proceed();
 
             // 执行耗时
             long executionTime = System.currentTimeMillis() - startTime;
 
+            String traceId = MDC.get("traceId");
             if (result instanceof Resp) {
                 ((Resp<?>) result).setTraceId(traceId);
             }
@@ -102,9 +103,7 @@ public class ApiOperationLogAspect {
             return result;
 
         } finally {
-
-            MDC.clear();
-
+            // MDC.clear();
         }
     }
 

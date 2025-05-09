@@ -13,6 +13,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.stream.Collectors;
 
+import static com.ekko.enums.ResponseCodeEnum.MSCE0001;
+import static com.ekko.enums.ResponseCodeEnum.MSCE9999;
+import static com.ekko.exception.BusinessException.ex;
+
 /**
  * TestController
  *
@@ -37,9 +41,9 @@ public class TestController {
 
             return Resp.createFailerResp(errorMsg);
         }
-
-        // 返参
-        return Resp.createSuccessCodeResp(user);
+        // ex(MSCE9999);
+        // int i = 1/0;
+        return Resp.createFailerResp(null);
     }
 
 }

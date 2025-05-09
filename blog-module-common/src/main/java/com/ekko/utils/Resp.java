@@ -1,7 +1,10 @@
 package com.ekko.utils;
 
+import com.ekko.exception.BaseExceptionInterface;
+import com.ekko.exception.BusinessException;
 import lombok.Data;
 
+import javax.xml.ws.Response;
 import java.io.Serializable;
 
 /**
@@ -45,5 +48,23 @@ public class Resp<T> implements Serializable {
         response.setData(datae);
         return response;
     }
+
+    public static <T> Resp<T> fail(BusinessException businessException,  T data) {
+        Resp<T> response = new Resp<>();
+        response.setCode(businessException.getErrorCode());
+        response.setMsg(businessException.getErrorMessage());
+        response.setTraceId((String) data);
+        return response;
+    }
+
+    public static <T> Resp<T> fail(BaseExceptionInterface baseExceptionInterface,  T data) {
+        Resp<T> response = new Resp<>();
+        response.setCode(baseExceptionInterface.getErrorCode());
+        response.setMsg(baseExceptionInterface.getErrorMessage());
+        response.setTraceId((String) data);
+        return response;
+    }
+
+
 
 }
