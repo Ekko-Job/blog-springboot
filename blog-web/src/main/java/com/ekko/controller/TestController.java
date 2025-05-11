@@ -3,6 +3,8 @@ package com.ekko.controller;
 import com.ekko.aspect.ApiOperationLog;
 import com.ekko.model.User;
 import com.ekko.utils.Resp;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
@@ -26,9 +28,11 @@ import static com.ekko.exception.BusinessException.ex;
  */
 @RestController
 @Slf4j
+@Api(tags = "测试模块")
 public class TestController {
 
     @PostMapping("/test")
+    @ApiOperation("测试接口")
     @ApiOperationLog(description = "测试接口")
     public Resp test(@RequestBody @Validated User user) {
         // 是否存在校验错误

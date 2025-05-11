@@ -18,7 +18,7 @@ public enum ResponseCodeEnum implements BaseExceptionInterface {
     // ----------- 未知错误异常 -----------
     SYSTEM_ERROR("ERROR9999", "出错啦，联系后台小哥修复..."),
 
-    // ----------- 业务异常 -----------
+    // ----------- 自定义业务异常 -----------
     MSCE0001("MSCE0001", "业务异常状态码（测试使用）"),
     MSCE9999("MSCE9999", "失败"),
 
