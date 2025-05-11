@@ -2,6 +2,7 @@ package com.ekko.controller;
 
 import com.ekko.aspect.ApiOperationLog;
 import com.ekko.model.User;
+import com.ekko.utils.JsonUtil;
 import com.ekko.utils.Resp;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -13,6 +14,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.stream.Collectors;
 
 import static com.ekko.enums.ResponseCodeEnum.MSCE0001;
@@ -47,7 +51,14 @@ public class TestController {
         // }
         // ex(MSCE9999);
         // int i = 1/0;
-        return Resp.createSuccessCodeResp(null);
+
+        log.info(JsonUtil.toJsonString(user));
+
+        user.setCreateTime(LocalDateTime.now());
+        user.setUpdateDate(LocalDate.now());
+        user.setTime(LocalTime.now());
+
+        return Resp.createSuccessCodeResp(user);
     }
 
 }

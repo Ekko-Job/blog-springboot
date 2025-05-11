@@ -2,6 +2,7 @@ package com.ekko.utils;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.HashMap;
@@ -18,6 +19,10 @@ import java.util.Map;
 public class JsonUtil {
 
     private static final ObjectMapper INSTANCE = new ObjectMapper();
+
+    static {
+        INSTANCE.registerModule(new JavaTimeModule());
+    }
 
     public static String toJsonString(Object obj) {
         try {
