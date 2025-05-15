@@ -16,7 +16,7 @@
     <groupId>com.ekko</groupId>
     <artifactId>blog-springboot</artifactId>
     <version>${revision}</version>
-    <name>blog-springboot</name>
+    <name>BLOG</name>
 
     <!-- 项目描述 -->
     <description>前后端分离博客 blog By Ekko</description>
@@ -27,7 +27,7 @@
     <!-- 子模块管理 -->
     <modules>
         <!-- 入口模块 -->
-        <module>blog-web</module>
+        <module>blog-module-web</module>
         <!-- 管理后台 -->
         <module>blog-module-admin</module>
         <!-- 通用模块 -->
