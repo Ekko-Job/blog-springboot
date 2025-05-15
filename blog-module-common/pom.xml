@@ -75,5 +75,10 @@
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
 
+        <!-- P6Spy 数据库监控框架-->
+        <dependency>
+            <groupId>p6spy</groupId>
+            <artifactId>p6spy</artifactId>
+        </dependency>
     </dependencies>
 </project>
