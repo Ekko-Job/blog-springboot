@@ -80,7 +80,7 @@ public class GlobalExceptionHandler {
         // 错误信息
         String errorMessage = sb.toString();
 
-        log.warn("接口: {} request error, errorMessage: {}", request.getRequestURI(), errorMessage);
+        log.warn("捕获参数校验异常(接口): {}, errorMessage: {}", request.getRequestURI(), errorMessage);
 
         return Resp.fail("优雅的参数校验: @Validated", errorMessage, MDC.get("traceId"));
     }
