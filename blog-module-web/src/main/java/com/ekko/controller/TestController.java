@@ -35,7 +35,7 @@ import static com.ekko.exception.BusinessException.ex;
 @Api(tags = "测试模块")
 public class TestController {
 
-    @PostMapping("/test")
+    @PostMapping("/admin/test")
     @ApiOperation("测试接口")
     @ApiOperationLog(description = "测试接口")
     public Resp test(@RequestBody @Validated User user) {

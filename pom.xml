@@ -32,8 +32,8 @@
         <module>blog-module-admin</module>
         <!-- 通用模块 -->
         <module>blog-module-common</module>
-        <!-- NEEX模块 -->
-        <!--        <module>blog-NEEX</module>-->
+        <!-- JWT 模块 -->
+        <module>blog-module-jwt</module>
     </modules>
 
     <!-- 版本号统一管理 -->
@@ -63,6 +63,12 @@
             <dependency>
                 <groupId>com.ekko</groupId>
                 <artifactId>blog-module-admin</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.ekko</groupId>
+                <artifactId>blog-module-jwt</artifactId>
                 <version>${revision}</version>
             </dependency>
 

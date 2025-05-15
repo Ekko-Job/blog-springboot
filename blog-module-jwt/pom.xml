@@ -1,5 +1,5 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
 
@@ -9,11 +9,11 @@
         <version>${revision}</version>
     </parent>
 
-    <artifactId>blog-module-admin</artifactId>
-    <name>blog-module-admin</name>
-    <description>blog-admin (负责管理后台相关功能)</description>
+    <artifactId>blog-module-jwt</artifactId>
+    <name>blog-module-jwt</name>
+    <description>blog-module-jwt (JWT 模块，管理用户认证、鉴权)</description>
 
-    <packaging>jar</packaging>
+    <packaging>war</packaging>
     <url>http://maven.apache.org</url>
 
     <properties>
@@ -21,16 +21,6 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>com.ekko</groupId>
-            <artifactId>blog-module-common</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.ekko</groupId>
-            <artifactId>blog-module-jwt</artifactId>
-        </dependency>
-
         <!-- 免写冗余的 Java 样板式代码 -->
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -43,12 +33,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
-        </dependency>
-
-        <!-- knife4j（API 文档工具）-->
-        <dependency>
-            <groupId>com.github.xiaoymin</groupId>
-            <artifactId>knife4j-openapi2-spring-boot-starter</artifactId>
         </dependency>
 
         <!-- Spring Security -->
