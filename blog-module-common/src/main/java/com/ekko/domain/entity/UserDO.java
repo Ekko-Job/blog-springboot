@@ -1,4 +1,4 @@
-package com.ekko.domain.dos;
+package com.ekko.domain.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;

@@ -1,7 +1,7 @@
 package com.ekko;
 
-import com.ekko.domain.dos.UserDO;
-import com.ekko.domain.mapper.UserMapper;
+import com.ekko.domain.entity.UserDO;
+import com.ekko.mapper.UserMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

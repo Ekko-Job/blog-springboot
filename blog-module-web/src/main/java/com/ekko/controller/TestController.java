@@ -50,6 +50,7 @@ public class TestController {
         //     return Resp.createFailerResp(errorMsg);
         // }
         // ex(MSCE9999);
+        Resp.fail(MSCE9999,  "失败");
         // int i = 1/0;
 
         log.info(JsonUtil.toJsonString(user));

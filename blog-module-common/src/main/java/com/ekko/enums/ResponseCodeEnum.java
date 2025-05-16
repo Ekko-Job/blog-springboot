@@ -21,6 +21,8 @@ public enum ResponseCodeEnum implements BaseExceptionInterface {
     // ----------- 自定义业务异常 -----------
     MSCE0001("MSCE0001", "业务异常状态码（测试使用）"),
     MSCE9999("MSCE9999", "失败"),
+    MSCE0002("MSCE0002", "登录失败"),
+    MSCE0003("MSCE0003", "用户名或密码错误"),
 
     // ----------- SUCCESS -----------
     MSCS0000("MSCS0000", "成功"),

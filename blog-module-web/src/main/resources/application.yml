@@ -1,3 +1,6 @@
 spring:
   profiles:
     active: dev
+jwt:
+  issuer: ekko # 签发人
+  secret: wCrNTcZKNj+gtOk+oLmUJNjxDY9HmlX7bSHLWavqjPjkjQyiVdBf1Wmw5z2Ac5lJl+r91DjprxglpES8e5wysA== # 秘钥

@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
  * @email ekko.zhang@unionftech.com
  */
 @Configuration
-@MapperScan("com.ekko.domain.mapper")
+@MapperScan("com.ekko.mapper")
 public class MybatisPlusConfig {
 
 }
