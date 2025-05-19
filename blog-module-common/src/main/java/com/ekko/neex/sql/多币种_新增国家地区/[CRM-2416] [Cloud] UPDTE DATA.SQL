@@ -4,7 +4,8 @@
 
 UPDATE  country SET is_risk = 1 WHERE code IN ('BLR', 'RUS', 'CUB', 'ZIM', 'LIB', 'MYA', 'NCA', 'SUD', 'VEN', 'UKR', 'SYR', 'CAF', 'COD', 'CGO', 'PRK', 'SSD');
 
-
+INSERT INTO currency_country (currency_id, country_id, eu, create_user_id, update_user_id, create_time, update_time)
+VALUES(',1,', 231, 0, 1, 1, now(), now());
 
 -- --------------------------------------------------
 --   Cloud  &  Payment
