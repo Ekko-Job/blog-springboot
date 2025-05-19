@@ -4,3 +4,6 @@ spring:
 jwt:
   issuer: ekko # 签发人
   secret: wCrNTcZKNj+gtOk+oLmUJNjxDY9HmlX7bSHLWavqjPjkjQyiVdBf1Wmw5z2Ac5lJl+r91DjprxglpES8e5wysA== # 秘钥
+  tokenExpireTime: 1440 # token 过期时间（单位：分钟） 24*60
+  tokenHeaderKey: Authorization # token 请求头中的 key 值
+  tokenPrefix: Bearer # token 请求头中的 value 值前缀

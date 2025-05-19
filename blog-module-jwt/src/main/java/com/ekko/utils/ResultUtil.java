@@ -62,9 +62,9 @@ public class ResultUtil {
      * @param result
      * @throws IOException
      */
-    public static void fail(HttpServletResponse response, int status, Resp<?> result) throws IOException {
+    public static void fail(HttpServletResponse response, String status, Resp<?> result) throws IOException {
         response.setCharacterEncoding("UTF-8");
-        response.setStatus(status);
+        response.setStatus(Integer.parseInt(status));
         response.setContentType("application/json");
         PrintWriter writer = response.getWriter();
 

@@ -26,6 +26,10 @@ public enum ResponseCodeEnum implements BaseExceptionInterface {
 
     // ----------- SUCCESS -----------
     MSCS0000("MSCS0000", "成功"),
+
+    // ----------- 全局系统异常 -----------
+    SYS0001("401", "无访问权限，请先登录！"),
+
     ;
 
     // 异常码

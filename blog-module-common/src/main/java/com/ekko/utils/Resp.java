@@ -1,5 +1,6 @@
 package com.ekko.utils;
 
+import com.ekko.enums.ResponseCodeEnum;
 import com.ekko.exception.BaseExceptionInterface;
 import com.ekko.exception.BusinessException;
 import lombok.Data;
@@ -48,6 +49,13 @@ public class Resp<T> implements Serializable {
         return response;
     }
 
+    // =================================== 通用enum响应 ===================================
+    public static <T> Resp<T> fail(ResponseCodeEnum data) {
+        Resp<T> response = new Resp<>();
+        response.setCode(data.getErrorCode());
+        response.setMsg(data.getErrorMessage());
+        return response;
+    }
     public static <T> Resp<T> fail(BusinessException businessException, T traceId) {
         Resp<T> response = new Resp<>();
         response.setCode(businessException.getErrorCode());
