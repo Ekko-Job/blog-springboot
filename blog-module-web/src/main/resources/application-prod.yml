@@ -1,10 +1,3 @@
-#=================================================================
-# log 日志
-#=================================================================
-logging:
-  config: classpath:logback-weblog.xml
-
-
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -20,3 +13,15 @@ spring:
       max-lifetime: 1800000
       connection-timeout: 30000
       connection-test-query: SELECT 1
+  security:
+    user:
+      name: admin
+      password: 123456
+jwt:
+  issuer: ekko # 签发人
+  secret: wCrNTcZKNj+gtOk+oLmUJNjxDY9HmlX7bSHLWavqjPjkjQyiVdBf1Wmw5z2Ac5lJl+r91DjprxglpES8e5wysA== # 秘钥
+  tokenExpireTime: 1440 # token 过期时间（单位：分钟） 24*60
+  tokenHeaderKey: Authorization # token 请求头中的 key 值
+  tokenPrefix: Bearer # token 请求头中的 value 值前缀
+logging:
+  config: classpath:logback-weblog.xml
