@@ -62,6 +62,9 @@ import {login} from '@/api/admin/user'
 import {useRouter} from 'vue-router';
 import { ref, reactive, onMounted, onBeforeUnmount } from 'vue'
 import {showMessage} from '@/composables/util'
+import { setToken } from '@/composables/auth'
+
+
 
 const router = useRouter()
 // 定义响应式的表单对象
@@ -87,6 +90,9 @@ const onSubmit = () => {
       if (res.data.code == "MSCS0000") {
         // 提示登录成功
         showMessage('登录成功', "success")
+        // 存储 Token 到 Cookie 中
+        let token = res.data.data.token
+        setToken(token)
         // 跳转到后台首页
         router.push('/admin/index')
       } else {
