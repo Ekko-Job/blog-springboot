@@ -87,17 +87,17 @@ const onSubmit = () => {
     login(form.username, form.password).then((res) => {
       console.log(res)
       // 判断是否成功
-      if (res.data.code == "MSCS0000") {
+      if (res.code == "MSCS0000") {
         // 提示登录成功
         showMessage('登录成功', "success")
         // 存储 Token 到 Cookie 中
-        let token = res.data.data.token
+        let token = res.data.token
         setToken(token)
         // 跳转到后台首页
         router.push('/admin/index')
       } else {
         // 获取服务端返回的错误消息
-        let message = res.data.data
+        let message = res.data
         // 提示消息
         showMessage(message, 'error')
       }
