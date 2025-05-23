@@ -4,6 +4,8 @@ import App from '@/App.vue' // 引入 App.vue 组件
 import router from '@/router' // 导入路由
 import * as ElementPlusIconsVue from '@element-plus/icons-vue' // 导入 Element Plus 图标
 import 'animate.css'; // 引入动画库
+import '@/permission'
+
 
 const app = createApp(App)
 
