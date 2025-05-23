@@ -5,6 +5,7 @@ import router from '@/router' // 导入路由
 import * as ElementPlusIconsVue from '@element-plus/icons-vue' // 导入 Element Plus 图标
 import 'animate.css'; // 引入动画库
 import '@/permission'
+import 'nprogress/nprogress.css'
 
 
 const app = createApp(App)

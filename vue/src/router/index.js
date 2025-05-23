@@ -9,14 +9,14 @@ const routes = [
         path: '/', // 路由地址
         component: Index, // 对应组件
         meta: { // meta 信息
-            title: 'BLOG 首页' // 页面标题
+            title: '首页' // 页面标题
         }
     },
     {
         path: '/login', // 登录页
         component: Login,
         meta: {
-            title: 'BLOG 登录页'
+            title: '登录页'
         }
     },
     {
