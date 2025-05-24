@@ -23,6 +23,8 @@ public enum ResponseCodeEnum implements BaseExceptionInterface {
     MSCE9999("MSCE9999", "失败"),
     MSCE0002("MSCE0002", "登录失败"),
     MSCE0003("MSCE0003", "用户名或密码错误"),
+    MSCE0004("MSCE0004", "测试账号仅支持查询操作！"),
+
 
     // ----------- SUCCESS -----------
     MSCS0000("MSCS0000", "成功"),

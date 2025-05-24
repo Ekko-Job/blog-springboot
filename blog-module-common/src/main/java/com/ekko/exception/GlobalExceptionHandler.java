@@ -4,6 +4,7 @@ import com.ekko.enums.ResponseCodeEnum;
 import com.ekko.utils.Resp;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.MDC;
+import org.springframework.security.access.AccessDeniedException;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -83,6 +84,13 @@ public class GlobalExceptionHandler {
         log.warn("捕获参数校验异常(接口): {}, errorMessage: {}", request.getRequestURI(), errorMessage);
 
         return Resp.fail("优雅的参数校验: @Validated", errorMessage, MDC.get("traceId"));
+    }
+
+    @ExceptionHandler({AccessDeniedException.class})
+    public void throwAccessDeniedException(AccessDeniedException e) throws AccessDeniedException {
+        // 捕获到鉴权失败异常，主动抛出，交给 RestAccessDeniedHandler 去处理
+        log.info("============= 捕获到 AccessDeniedException");
+        throw e;
     }
 
 }
