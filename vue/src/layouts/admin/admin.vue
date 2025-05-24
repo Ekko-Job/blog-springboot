@@ -1,7 +1,8 @@
-<script>
-export default {
-  name: "admin"
-}
+<script setup>
+import AdminFooter from './components/AdminFooter.vue';
+import AdminHeader from './components/AdminHeader.vue';
+import AdminMenu from './components/AdminMenu.vue';
+import AdminTagList from './components/AdminTagList.vue';
 </script>
 
 <template>
@@ -36,11 +37,8 @@ export default {
   </el-container>
 </template>
 
-
-<script setup>
-// 引入组件
-import AdminFooter from './components/AdminFooter.vue';
-import AdminHeader from './components/AdminHeader.vue';
-import AdminMenu from './components/AdminMenu.vue';
-import AdminTagList from './components/AdminTagList.vue';
-</script>
+<style scoped>
+.el-header {
+  padding: 0!important;
+}
+</style>
