@@ -1,12 +1,12 @@
 <script>
 export default {
-  name: "index"
+  name: "tag-list"
 }
 </script>
 
 <template>
   <div>
-    后台首页-仪表盘
+    标签管理页
   </div>
 </template>
 

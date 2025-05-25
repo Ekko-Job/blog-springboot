@@ -1,12 +1,12 @@
 <script>
 export default {
-  name: "index"
+  name: "category-list"
 }
 </script>
 
 <template>
   <div>
-    后台首页-仪表盘
+    分类管理页
   </div>
 </template>
 

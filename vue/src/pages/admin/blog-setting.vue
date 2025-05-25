@@ -1,12 +1,12 @@
 <script>
 export default {
-  name: "index"
+  name: "blog-setting"
 }
 </script>
 
 <template>
   <div>
-    后台首页-仪表盘
+    博客设置页
   </div>
 </template>
 
