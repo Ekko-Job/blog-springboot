@@ -6,12 +6,14 @@ import * as ElementPlusIconsVue from '@element-plus/icons-vue' // 导入 Element
 import 'animate.css'; // 引入动画库
 import '@/permission'
 import 'nprogress/nprogress.css'
-
+import { createPinia } from 'pinia' // 引入全局状态管理 Pinia
 
 const app = createApp(App)
+const pinia = createPinia()
 
 app.use(router) // 应用路由
 app.mount('#app')
+app.use(pinia) // 应用 Pinia
 
 for (const [key, component] of Object.entries(ElementPlusIconsVue)) { // 引入图标
     app.component(key, component)

@@ -1,8 +1,13 @@
 <script setup>
+// 引入组件
 import AdminFooter from './components/AdminFooter.vue';
 import AdminHeader from './components/AdminHeader.vue';
 import AdminMenu from './components/AdminMenu.vue';
 import AdminTagList from './components/AdminTagList.vue';
+
+import {useMenuStore} from '@/stores/menu'
+
+const menuStore = useMenuStore()
 </script>
 
 <template>
@@ -10,11 +15,11 @@ import AdminTagList from './components/AdminTagList.vue';
   <el-container>
 
     <!-- 左边侧边栏 -->
-    <el-aside>
+    <el-aside :width='menuStore.menuWidth' class="transition-all duration-300">
       <AdminMenu></AdminMenu>
     </el-aside>
 
-    <!-- 主容器 -->
+    <!-- 右边主内容区域 -->
     <el-container>
       <!-- 顶栏容器 -->
       <el-header>
@@ -39,6 +44,6 @@ import AdminTagList from './components/AdminTagList.vue';
 
 <style scoped>
 .el-header {
-  padding: 0!important;
+  padding: 0 !important;
 }
 </style>

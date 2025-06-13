@@ -1,7 +1,5 @@
-<script>
-export default {
-  name: "AdminFooter"
-}
+<script setup>
+
 </script>
 
 <template>
